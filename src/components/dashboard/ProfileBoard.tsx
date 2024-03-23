@@ -11,14 +11,14 @@ export default function ProfileBoard() {
       {/* {JSON.stringify(pinnedRepos)} */}
       {/* <Image src={"/profile.png"} alt="profile" width={200} height={200} /> */}
       <div>
-        <Name>Ye-Chan Kang</Name>
-        <Desc>개선하고, 변화시키고, 즐거운 것들</Desc>
+        <Name>Umair Ansari</Name>
+        <Desc>Improving, transforming, and enjoying things</Desc>
         {/* <Desc>Things to improve, change, and have fun doing.</Desc> */}
         <Email>
           <IconMail stroke={1.5} width={14} height={14} />
-          kyechan99@gmail.com
+          uumair327@gmail.com
         </Email>
-        <OutLink href="https://github.com/kyechan99">
+        <OutLink href="https://github.com/uumair327">
           <IconBrandGithubFilled /> GitHub
         </OutLink>
         <OutLink href="/resume" style={{ paddingRight: "1.25rem" }}>

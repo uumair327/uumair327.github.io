@@ -7,20 +7,19 @@ import { allPostPosts } from "@/constants/posts";
 import { getBaseMetadata } from "@/utils/seo";
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "포스팅",
+  title: "Posts",
   path: "/post",
 });
 
 export default function PostPage() {
   return (
     <Layout>
-      <h1>포스팅</h1>
+      <h1>Posts</h1>
       <Banner>
-        연구하거나 공부한 것을 기록하는 공간입니다.
+        This is a space to record research or study.
         <br />
-        배움은 나눌수록 커지잖아요
+        Learning grows as you share it.
       </Banner>
-
       <PostFeed posts={allPostPosts} />
     </Layout>
   );

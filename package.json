@@ -1,8 +1,8 @@
 {
-  "name": "kyechan99.github.io",
+  "name": "uumair327.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kyechan99.github.io/",
+  "homepage": "https://uumair327.github.io/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

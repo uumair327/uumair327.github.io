@@ -11,7 +11,7 @@ import Readingtime from "../Readingtime";
 import TagList from "../common/tag/TagList";
 
 /***************************************************
- *        글의 상단, 제목 부분을 그려주는 컴포넌트
+ *        A component that renders the top section and title of a post.
  ***************************************************/
 export default function PostHead({ post }: { post: Post | undefined }) {
   if (post === undefined) return <></>;

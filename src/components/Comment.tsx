@@ -32,10 +32,10 @@ export default function Comments() {
   return (
     <Giscus
       id="giscus-comments"
-      repo="kyechan99/kyechan99.github.io"
-      repoId="MDEwOlJlcG9zaXRvcnkxNjM1NjgwMzY"
+      repo="uumair327/uumair327.github.io"
+      repoId="R_kgDOLkTTeA"
       category="General"
-      categoryId="DIC_kwDOCb_ZpM4Cbfjp"
+      categoryId="DIC_kwDOLkTTeM4CeK-f"
       mapping="pathname"
       strict="0"
       reactionsEnabled="1"

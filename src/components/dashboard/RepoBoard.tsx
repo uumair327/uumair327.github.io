@@ -22,7 +22,7 @@ type RepoType = {
 
 const getPinnedRepos = async () => {
   try {
-    const res = await fetch("https://gh-pinned-api.vercel.app/api?user=kyechan99", {
+    const res = await fetch("https://gh-pinned-api.vercel.app/api?user=uumair327", {
       next: {
         revalidate: 86400, // 24 시간 간격
       },
@@ -31,7 +31,7 @@ const getPinnedRepos = async () => {
     const data = await res.json();
     return data;
   } catch (err) {
-    console.log("에러 ", err);
+    console.log("Error", err);
   }
 };
 
@@ -51,7 +51,7 @@ export default function RepoBoard() {
     <>
       <H2>
         Pinned Repo
-        <PlusLink href="https://github.com/kyechan99">+</PlusLink>
+        <PlusLink href="https://github.com/uumair327">+</PlusLink>
       </H2>
       <Card>
         <CardRow>

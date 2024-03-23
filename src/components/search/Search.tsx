@@ -121,10 +121,10 @@ export default function Search() {
                 {posts.slice(0, 10).map((post, idx) => (
                   <SearchItem key={idx} post={post} role="listitem" />
                 ))}
-                {posts.length >= 10 && <Warning>결과물이 너무 많아요 ! (최대 10개)</Warning>}
+                {posts.length >= 10 && <Warning>There are too many results! (Maximum 10)</Warning>}
 
                 <Classify>Recommends</Classify>
-                <StaticItem href="https://github.com/kyechan99" role="listitem">
+                <StaticItem href="https://github.com/uumair327" role="listitem">
                   <IconBrandGithubFilled /> Github
                 </StaticItem>
                 <StaticItem href="/post" role="listitem">

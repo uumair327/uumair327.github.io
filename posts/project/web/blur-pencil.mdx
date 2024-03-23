@@ -3,7 +3,7 @@ layout: post
 title: BLUR PENCIL
 date: 2020-11-1
 category: Web
-description: 자동 모자이크 웹 서비스
+description: Automatic mosaic web service
 tags: [Web, Vue, Osam]
 keywords: Web, Vue, API, Blur, Osam, Mosaic
 comments: false
@@ -11,47 +11,45 @@ haveImg: true
 headerImg: 2020-11-1-Blur-Pencil.png
 ---
 
-"Blur Pencil은 Blur와 Pencil을 합친 단어로, 모자이크 처리 하고 싶은 이미지를 Pencil(연필)과 같은 우리에게 익숙한 도구로 간단하고 쉽게 Blur처리 하기 위해 고안한 아이디어 입니다. 접근하기 편리한 웹을 통해 이미지를 드래그 앤 드랍만 하면, 학습된 Blur Pencil이 이미지를 분석한 뒤, 모자이크 할 객체를 인식하며, 인식된 객체 중 원하는 객체를 골라 모자이크 처리를 할 수 있습니다. 또한 모자이크 처리 된 이미지 내역들을 저장할 수 있으며, 다른 사용자와 공유할 수 있도록 도와줍니다."
+"Blur Pencil" is a combination of "Blur" and "Pencil", designed to simplify and easily blur images using a familiar tool like a pencil. By simply dragging and dropping the image on the convenient web interface, the trained Blur Pencil analyzes the image, identifies the objects to be mosaic, and allows you to select and mosaic the desired objects among the recognized objects. It also allows you to save the mosaic-treated image history and share it with other users.
 
----
+## Overview
 
-## 개요
+An online hackathon (SW development competition) was held at the [Ministry of National Defense Open Source Academy](https://osam.kr/main/index.jsp) (hereinafter referred to as osam). After attending programming courses (web, app, infrastructure, etc.) provided by osam for several months and submitting several documents and algorithm contests, I was selected for the hackathon.
 
-군 복무 중에 1년에 한번씩 진행하는 [국방부 오픈소스 아카데미](https://osam.kr/main/index.jsp)(이하 osam)라고 불리는 곳에서 온라인 해커톤(SW 개발 대회)이 열렸습니다. 몇달간 osam 에서 제공하는 프로그래밍 강의들(웹, 앱, 인프라 등)을 듣고 알고리즘 대회와 몇 서류를 제출 해서 해커톤에 선출되었습니다.
+The hackathon, which has been held since 2015, was held for five days, but this time it was changed to online due to the influence of COVID-19. Perhaps because there is only time to develop programs during the evening hours in the military (of course, the perspective varies depending on the unit), the period has been extended to one month. It was a shame because meeting new people and working on projects for several days while staying up all night is the charm of hackathons.
 
-15년도 부터 시작해서 지금까지 진행해 온 해커톤인데 5일간 진행되었던 캠프를 코로나의 영향으로 이번엔 온라인으로 변경이 되었더군요. 군인 신분에서 프로그래밍 개발할 시간은 저녁 시간밖에 없음을 알았는지 (물론 부대마다 입장은 다르지만) 그래도 기간은 한달로 늘어났습니다. 오프라인에서 새로운 사람들과 만나 몇일간 밤 새우며 프로젝트를 진행하는게 해커톤의 묘미인지라 아쉬움이 남을 수 밖에 없었던거 같아요.
+## Introduction Video
 
-## 소개 영상
+## Development
 
-## 개발
+The structure is divided into three main parts: a web front-end using Vue, an express API server to communicate with MongoDB, and a pytorch server to process uploaded images.
 
-구조는 크게 3개로 Vue를 사용한 웹 프론트, 몽고 디비랑 통신해줄 express api 서버, 업로드한 이미지를 처리해줄 pytorch 서버로 나뉩니다.
+I mainly worked on design, server communication, dashboards, and workbenches on the front end. There was not much backend work, as the core mosaic processing is handled by the PyTorch server. Therefore, it seemed manageable to handle it alone, as I only needed to communicate with the database for user and file information. (Of course, considering security and stability, there was no end...)
 
-저는 프론트에선 주로 디자인이나 서버와의 통신, 대시보드나 작업대를 맡았습니다. 백엔드는 크게 없었던것이, 사실 핵심적인 모자이크 처리는 PyTorch 서버에서 처리해주기 때문에 유저, 파일 정보 들만 DB와 통신 처리하면 됐기 때문에 혼자서도 감당 가능했던것 같습니다. (물론 보안이나 안정성등을 생각하면 끝이 없었겠지만 한 달안 정상 작동이 우선이기에..)
+### Structure
 
-### 구조
+![Structure](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/archi.png)
 
-![구조](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/archi.png)
+### Design
 
-### 설계
+![Design](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/archi2.png)
 
-![설계](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/archi2.png)
+### API Guide (User-related)
 
-### API 가이드(유저 관련)
+[📝 Guide Document](https://github.com/osamhack2020/Cloud_BlurPencil_GonNyong4/wiki/API-Guide)
 
-[📝 가이드 문서](https://github.com/osamhack2020/Cloud_BlurPencil_GonNyong4/wiki/API-Guide)
+### API Guide (Logo Detection)
 
-### API 가이드(로고 인식 관련)
+[📝 Guide Document](https://github.com/osamhack2020/Cloud_BlurPencil_GonNyong4/wiki/API-Guide-(Logo-Detection))
 
-[📝 가이드 문서](<https://github.com/osamhack2020/Cloud_BlurPencil_GonNyong4/wiki/API-Guide-(Logo-Detection)>)
+## Computer Configuration / Prerequisites
 
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+- Recommended: Latest version of Chromium-based browser
 
-- 권장 : 최신 버전의 크로미움 기반 브라우저
+## Technology Stack
 
-## 기술 스택 (Technique Used)
-
-### Server(back-end)
+### Server (back-end)
 
 - Node.js
 - Express
@@ -59,60 +57,56 @@ headerImg: 2020-11-1-Blur-Pencil.png
 - Flask
 - PyTorch
 
-### front-end
+### Front-end
 
 - Vue.js
 - Bootstrap
 
-## 사용법
+## Usage
 
-### 사진을 드래그 앤 드롭
+### Drag and Drop Photos
 
 ![2](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/1.png)
 
 ---
 
-### 인식된 객체중 모자이크할 객체를 선택 및 해제
+### Select and Deselect Objects to be Mosaicked among Recognized Objects
 
 ![3](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/2.png)
 
-> 인식률과 NMS 수치를 변경해서 검열될 이미지들의 디테일을 변경할 수 있다.
+> You can change the recognition rate and NMS value to change the details of the images to be censored.
 
-저희 핵심이자 모자이크 작업을 진행해주는 **작업대**입니다. 우측에 데이터 수치를 변경해주면서 Flask API 서버와 통신해서 검열 예상되는 이미지 좌표를 받아오고 해당 이미지들을 밑에 뿌려줍니다.
+This is our core and **workbench** that provides mosaic work. By changing the data values on the right, we communicate with the Flask API server to receive the expected image coordinates to be censored and display those images below.
 
-찾은 이미지들을 선택 및 해제해서 검열 하고자 하는 이미지들을 지정함으로서 편하게 모자이크 된다는게 blur pencil의 장점입니다.
+The advantage of blur pencil is that you can easily mosaic by selecting and deselecting the found images.
 
 ---
 
-### 모자이크 처리 완료된 이지미를 확인 후 다운
+### Check the Completed Mosaicked Image and Download It
 
 ![4](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/3.png)
 
 ---
 
-## 메인 페이지
+## Main Page
 
 ![5](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/prev_dash.png)
 
-메인 페이지는 상당히 공을 들였는데요. 아무래도 심사위원 분들이 심사를 하기위해 테스트를 한다면 제일 먼저 (물론 랜딩페이지 다음으로) 보여지기 때문이였습니다. 아무래도 개발자들만 모였다 보니 디자인이 참 쉽지 않아 여러 사이트를 많이 참고했습니다.
-
-특히 참고했던게 구글 드라이브였는데, 처음엔 폴더 기능이나 공유 기능을 생각 안했다가 대시보드가 너무 밋밋한 바람에 마감주에 급하게 제작해봤습니다. 다행히 팀원분들도 맘에 들어주신거 같고, 회원가입을 해야되는 이유나 대시보드가 이뻐지는 등 개인적으로 제일 잘한일이라고 생각합니다.
+Considerable effort was put into the main page. Because the judges need to test it first (of course, after the landing page), since only developers gathered, the design was quite challenging. I referred to many sites, especially Google Drive. At first, I didn't think about the folder and sharing features, but because the dashboard was too dull, I hastily made it during the deadline week. Fortunately, my team members seemed to like it, and I think it was the best thing I did, personally.
 
 ---
 
-## 데모 이미지
+## Demo Images
 
-![demo](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/example1.png)
-![demo](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/example2.png)
+![Demo](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/example1.png)
+![Demo](https://github.com/kyechan99/Cloud_BlurPencil_GonNyong4/raw/master/images/example2.png)
 
-## 랜딩 페이지
+## Landing Page
 
-## 마치면서
+## Conclusion
 
-개인적으로 군 복무중인 프로그래밍 개발자분이 계시다면 **무조건** osam 을 참여해야 된다고 생각합니다. 물론 시간도 없고 다른 할일도 많겠지마는 부대내에서 합법적으로 코딩할 수 있는 기회는 상당히 적습니다.
+If you are a programming developer in the military, I strongly believe that you should participate in osam without hesitation. Of course, there may not be much time, and there may be many other things to do, but the opportunity to legally code within the military is quite rare.
 
-무엇보다 20년도는 코로나 때문에 온라인이였지만, 앞으로 다시 오프라인 일때는 무려 한 주간 해커톤 때문에 부대내에 없는 것이 엄청난 장점입니다. (정말 중요ㅎㅎ) 무엇보다 상도 탄다면 휴가나 상금을 주는것도 크죠.
+Above all, although the hackathon was held online in 2020 due to COVID-19, if it is held offline again in the future, the fact that you are absent from your unit for a whole week due to the hackathon is a huge advantage (very important haha). Moreover, if you win, you may receive vacation or prize money.
 
-중간에 알고리즘 시험이 있는데 난이도 자체는 정말 쉽습니다. 그렇다고 osam 에 있는 강의로 프로그래밍을 시작해서 시험을 보기에는 조금 힘들 순 있습니다. 동기가 실제로 휴가때문에 노렸지만 결국 포기하더군요. 알고리즘 사이트에서 제일 낮은 단계 몇개만 풀어봐도 비슷한 유형으로 나오는 문제만 풀어도 합격이 되니 너무 걱정은 하지말고 지원해봤음 좋겠습니다.
-
-모두 휴가 많이 받고 건강히 전역할 수 있게 파이팅입니다!
+There is a mid-term algorithm exam, but the difficulty level is really easy. However, it may be a bit difficult to participate in

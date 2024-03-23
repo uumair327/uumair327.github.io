@@ -1,168 +1,158 @@
 ---
 layout: post
-title: Lemonade API 사용하기 - 2
+title: Using Lemonade API - Part 2
 date: 2017-07-18
 category: Tech
-description: Lemonade API 사용하기 - 2
+description: Using Lemonade API - Part 2
 tags: [Edu, Lemonade, Lemonade-API]
 keywords: Lemonade, Lemonade-API
 ---
 
-## 서론
+## Introduction
 
-2장은 Lemonade를 적용하기 전에 안드로이드 스튜디오에서 기본적으로 세팅해야 할 부분 입니다.
+Chapter 2 covers the basic setup required in Android Studio before applying Lemonade.
 
-## 참고
+## References
 
-- API 적용한 유니티 샘플 : [링크](https://github.com/LemonClub/lemonade-android-api-unity-example)
-- Lemonade 개발자 [사이트](http://lemontree.dothome.co.kr/lemonade/)
-- [Lemonade API 사용하기 - 1](/tech/2017/07/14/LemonadeAPI-desc-1)
+- API Applied Unity Sample: [Link](https://github.com/LemonClub/lemonade-android-api-unity-example)
+- Lemonade Developer [Site](http://lemontree.dothome.co.kr/lemonade/)
+- [Using Lemonade API - Part 1](/tech/2017/07/14/LemonadeAPI-desc-1)
 
-## 1. 안드로이드 스튜디오 새 프로젝트 만들기
+## 1. Creating a New Android Studio Project
 
-### 1-1. 새 프로젝트
+### 1-1. New Project
 
 ![1](/img/2017-7-20-LemonadeAPI-func/10.PNG)
 
-기본적으로 안드로이드 프로젝트를 생성합니다.
+Create a new Android project.
 
 <br />
 
-### 1-2. APP 이름
+### 1-2. APP Name
 
 ![1](/img/2017-7-20-LemonadeAPI-func/11.PNG)
 
-처음 [1장](/tech/2017/07/14/LemonadeAPI-desc-1.html) 때 설정했던 package name 으로 설정합니다.
+Set the package name as configured in [Chapter 1](/tech/2017/07/14/LemonadeAPI-desc-1.html).
 
-> 이 외의 것은 작동하지 않으므로 조심해야 합니다.
+> Be careful, as anything else won't work.
 
 <br />
 
-### 1-3. 디바이스 설정
+### 1-3. Device Configuration
 
 ![1](/img/2017-7-20-LemonadeAPI-func/12.PNG)
 
-넘어갑니다.
+Skip.
 
 <br />
 
-### 1-4. 액티비티 설정
+### 1-4. Activity Configuration
 
 ![1](/img/2017-7-20-LemonadeAPI-func/13.PNG)
 
-넘어갑니다.
+Skip.
 
 <br />
 
-### 1-5. 액티비티 이름
+### 1-5. Activity Name
 
 ![1](/img/2017-7-20-LemonadeAPI-func/14.PNG)
 
-넘어갑니다.
+Skip or change the Activity name if needed, although it's recommended to keep it for consistency.
 
-Activity name을 바꾸셔도 상관 없지만, 차후에 계속해서 바꾸어야 하기 때문에 추천하진 않습니다.
-
-## 2. Gradle 설정하기
+## 2. Setting up Gradle
 
 ### 2-1. Gradle
 
 ![1](/img/2017-7-20-LemonadeAPI-func/16.PNG)
 
-프로젝트가 생성되었으니 app/build.gradle 로 들어가줍니다.
+Navigate to app/build.gradle.
 
 <br />
 
-### 2-2. Gradle 변경
+### 2-2. Gradle Modifications
 
 ![1](/img/2017-7-20-LemonadeAPI-func/17.PNG)
 
-Gradle의 내용을 다음과 같이 변경하고 추가해 줍니다.
+Modify and add the contents of Gradle as shown.
 
-> [스크립트](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/build.gradle)
+> [Script](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/build.gradle)
 
-참고 : 모두 바꾸시는것이 아닌 본인 환경에 맞추어 바꾸셔야 합니다.
-( 필수로 변경 삭제 추가될 부분은 위 링크에 주석처리로 설명해 놓았습니다. )
+Note: Modify according to your environment, as indicated by comments in the provided link.
 
-## 3. MainActivity 설정하기
+## 3. Setting up MainActivity
 
 ![1](/img/2017-7-20-LemonadeAPI-func/18.PNG)
 
-[링크](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/src/main/java/net/lemontree/lemonade/MainActivity.java)
-로 들어가 MainActivity에 CtrlCV 해줍니다.
+Copy the content from [this link](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/src/main/java/net/lemontree/lemonade/MainActivity.java) to your MainActivity.
 
-> 추가된 부분의 스크립트는 첨삭 및 수정은 자유로우나 추천하지 않습니다.
-> ( 시스템상의 로직이나 구성을 망칠 수 있음 )
+> It's not recommended to modify the added script as it may affect the system logic or configuration.
 
 ![1](/img/2017-7-20-LemonadeAPI-func/19.PNG)
 
-## 4. Splash 만들기
+## 4. Creating a Splash
 
-### 4-1. Splash 만들기
+### 4-1. Creating a Splash
 
 ![1](/img/2017-7-20-LemonadeAPI-func/20.PNG)
 
-app/src/main/java/설정한-package-name/ 경로에 다음과 같이 Java Class를 생성합니다.
+Create a Java Class named Splash under app/src/main/java/your-package-name/.
 
 ![1](/img/2017-7-20-LemonadeAPI-func/21.PNG)
 
-사진과 같이 생성되었다면 [링크](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/src/main/java/net/lemontree/lemonade/Splash.java) 의 내용을 CtrlCV 해줍니다.
+Once created, copy the content from [this link](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/src/main/java/net/lemontree/lemonade/Splash.java) to your Splash.java.
 
-> 추가된 부분의 스크립트는 첨삭 및 수정은 자유로우나 추천하지 않습니다.
-> ( 시스템상의 로직이나 구성을 망칠 수 있음 )
+> It's not recommended to modify the added script as it may affect the system logic or configuration.
 
 <br />
 
-### 4-2. Splash xml 만들기
+### 4-2. Creating Splash XML
 
 ![1](/img/2017-7-20-LemonadeAPI-func/23.PNG)
 
-다음과 같이 layout xml 을 만듭니다.
+Create a layout XML file.
 
 ![1](/img/2017-7-20-LemonadeAPI-func/24.PNG)
 
-다음과 같이 만드신 후 activity_splash.xml 의 내용은 [링크](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/src/main/res/layout/activity_splash.xml) 의 내용을 CtrlCV 해줍니다.
+Copy the content from [this link](https://github.com/LemonClub/lemonade-androidstudio-unity/blob/master/app/src/main/res/layout/activity_splash.xml) to your activity_splash.xml.
 
-> 추가된 부분의 스크립트는 첨삭 및 수정은 자유로우나 추천하지 않습니다.
-> ( 시스템상의 로직이나 구성을 망칠 수 있음 )
+> It's not recommended to modify the added script as it may affect the system logic or configuration.
 
-## 5. Export 하기
+## 5. Exporting
 
-IDE의 우측 맨 끝의 Gradle 항목을 눌러줍니다.
+Click on the Gradle option on the right side of the IDE.
 
 ![1](/img/2017-7-20-LemonadeAPI-func/27.PNG)
 
-:app/other/exportJar 를 눌러줍니다.
+Select :app/other/exportJar.
 
 ![1](/img/2017-7-20-LemonadeAPI-func/28.PNG)
 
-완료가 되었다면
-프로젝트/app/release 경로에 AndroidPlugin.jar 파일이 생겼을 것입니다.
+After completion, you'll find AndroidPlugin.jar in the project/app/release directory.
 
-jar 파일이 생기지 않은 흔한 이유
+Common reasons for the jar file not appearing:
 
-1. :app/other/exportJar 가 아닌 다른것을 누름
+1. Choosing something other than :app/other/exportJar.
+2. Inconsistency in compilation targets between project/build.gradle and project/app/build.gradle, often caused by blindly copying the provided build.gradle script.
 
-2. 프로젝트/build.gradle 과 프로젝트/app/build.gradle 에서 설정한 컴파일 대상이 서로 다름
-   > 보통 위의 build.gradle 링크를 무작정 CtrlCV 했을때 생겨납니다.
-
-## 6. AndroidPlugin.jar 파일 옮기기
+## 6. Moving AndroidPlugin.jar
 
 ![1](/img/2017-7-20-LemonadeAPI-func/30.PNG)
 
-Release 된 AndroidPlugin.jar 파일을 Unity-Project-경로/Assets/Plugins/Android/ 에 옮겨줍니다.
+Move the released AndroidPlugin.jar file to Unity-Project-Path/Assets/Plugins/Android/.
 
-## 7. AndroidManifest.xml 수정하기
+## 7. Modifying AndroidManifest.xml
 
-1장에서 만든 AndroidManifest.xml 을 수정합니다.
+Modify the AndroidManifest.xml created in Chapter 1.
+
 ![1](/img/2017-7-20-LemonadeAPI-func/31.PNG)
 
-초기엔 위에 처럼 되어 있을건데요.
+Initially, it may look like the image above.
 
 ![1](/img/2017-7-20-LemonadeAPI-func/32.PNG)
 
-다음과 같이 변경해줍니다.
+Modify it as shown in the image above.
 
-참고 : 수정해야 할 내용은 [링크](https://github.com/LemonClub/lemonade-android-api-unity-example/blob/master/Assets/Plugins/Android/AndroidManifest.xml)에서 `<!-- 기호 -->` 형태로 표시해 두었습니다.
+Note: The sections that need modification are marked in the provided [link](https://github.com/LemonClub/lemonade-android-api-unity-example/blob/master/Assets/Plugins/Android/AndroidManifest.xml) with `<!-- symbols -->`.
 
-이상으로 사용하기 위한 설정이 모두 끝났습니다.
-다음 장은 Lemonade API 기능과 그 사용 방법에 대해 설명합니다.
+With this, all the settings required for use are complete. The next chapter explains the Lemonade API features and how to use them.

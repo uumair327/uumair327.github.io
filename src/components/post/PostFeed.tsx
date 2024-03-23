@@ -10,7 +10,7 @@ import { maxMedia } from "@/libs/media";
 import { PostType } from "@/types/post";
 
 /***************************************************
- *        글 목록 Feed 를 보여주는 컴포넌트
+ *        Component to display a feed of posts.
  ***************************************************/
 export function PostFeed({ posts }: { posts: PostType[] }) {
   const [menu, setMenu] = useState<string>("All");

@@ -15,11 +15,11 @@ export default function Footer() {
       <FooterNavBar>
         <Row className="row" $direction="row">
           <Col className="col-0" width="33.333%">
-            <p className="name">Ye-Chan Kang</p>
-            <p className="email">kyechan99@gmail.com</p>
+            <p className="name">Umair Ansari</p>
+            <p className="email">uumair327@gmail.com</p>
           </Col>
           <Col className="col-1" width="33.333%">
-            <a href="https://github.com/kyechan99" target="__">
+            <a href="https://github.com/uumair327" target="__">
               <IconBrandGithubFilled width={32} height={32} />
             </a>
           </Col>

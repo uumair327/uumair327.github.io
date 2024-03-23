@@ -18,7 +18,7 @@ export default function useTocHighlight(init_id: string): [string, React.Dispatc
       threshold: 1.0,
     });
 
-    //! h2, h3, h4 만 필터함  -  그 이상은 쓸일도 없고 과할듯? 필요하면 추가
+    //! Only filter h2, h3, h4 - beyond that seems unnecessary and excessive. Add if needed.
     const elements = document.querySelectorAll("h2, h3, h4");
     elements.forEach(elem => observer.current?.observe(elem));
 

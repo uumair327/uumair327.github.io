@@ -17,11 +17,11 @@ export default function Helper({ post }: { post: Post }) {
 
     navigator.clipboard.writeText(currentUrl).then(
       () => {
-        // setCopySuccess('주소가 성공적으로 복사되었습니다.');
+        // setCopySuccess('The address has been successfully copied.');
       },
       err => {
-        console.error("주소 복사 실패:", err);
-        // setCopySuccess('주소 복사 실패');
+        console.error("Failed to copy the address.", err);
+        // setCopySuccess('The address copy has failed.');
       },
     );
   };

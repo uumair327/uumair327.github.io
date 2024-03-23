@@ -5,15 +5,15 @@ import { PostType } from "@/types/post";
 import { headerImgPath } from "./url";
 
 export const siteConfig = {
-  url: "https://kyechan99.github.io",
-  title: "kyechan99",
-  description: "kyechan99",
-  copyright: "kyechan99 © All rights reserved.",
-  since: 2023,
+  url: "https://uumair327.github.io",
+  title: "uumair327",
+  description: "uumair327",
+  copyright: "uumair327 © All rights reserved.",
+  since: 2024,
   googleAnalyticsId: "",
-  author: "kyechan99",
-  email: "kyechan99@gmail.com",
-  profile: "https://kyechan99.github.io/profile.png",
+  author: "uumair327",
+  email: "uumair327@gmail.com",
+  profile: "https://uumair327.github.io/profile.png",
 };
 
 const getRelativeUrl = (url?: string) => {
@@ -65,7 +65,7 @@ export const getArticleMetadata = (post: PostType): Metadata => {
       url,
       publishedTime: dateTime,
       modifiedTime: dateTime,
-      authors: [`https://github.com/kyechan99`],
+      authors: [`https://github.com/uumair327`],
       tags: post.tags,
       images: [
         {
@@ -92,7 +92,7 @@ export const JSONLD = (post: PostType) => {
       url: siteConfig.url,
       nationality: {
         "@type": "Country",
-        name: "South Korea",
+        name: "India",
       },
     },
     image: siteConfig.profile,

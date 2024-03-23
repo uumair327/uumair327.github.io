@@ -14,7 +14,7 @@ import { Row } from "../common/grid/Container";
 import TagList from "../common/tag/TagList";
 
 /***************************************************
- *        작성글로 이동하는 글 카드
+ *        Article card with link to the full content.
  ***************************************************/
 export default function PostCard(post: PostType) {
   const [ref, visible] = useFadeIn();

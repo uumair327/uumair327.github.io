@@ -10,20 +10,19 @@ import { getBaseMetadata } from "@/utils/seo";
 import { allProjectPosts } from "@/constants/posts";
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "프로젝트",
+  title: "Projects",
   path: "/project",
 });
 
 export default function PostPage() {
   return (
     <Layout>
-      <h1>프로젝트</h1>
+      <h1>Projects</h1>
       <Banner bannerType="project">
-        구상하고, 구현하는 일은 짜릿해요.
+        Dreaming, designing, and implementing is thrilling.
         <br />
-        새로운 도전에도 적극적으로 참여하고자 노력하고 있어요.
+        I actively strive to participate in new challenges.
       </Banner>
-
       <PostFeed posts={allProjectPosts} />
     </Layout>
   );

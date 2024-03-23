@@ -14,7 +14,7 @@ export default function MDXCode({ children, className, title }: React.ComponentP
     navigator.clipboard.writeText(code).then(
       () => {},
       err => {
-        console.error("주소 복사 실패:", err);
+        console.error("Address copy failed.", err);
       },
     );
   };

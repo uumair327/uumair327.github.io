@@ -10,7 +10,7 @@ export default function PostArticle(props: PropsWithChildren) {
     <article>
       <Content>{props.children}</Content>
       <SmallBanner>
-        틀린 내용이 있다면 지적해 주시고, <br className="tablet-br" />더 좋은 방법이나 생각을 공유해주세요.
+        If there is any incorrect content, please point it out., <br className="tablet-br" />Please share any better methods or ideas you have.
       </SmallBanner>
     </article>
   );

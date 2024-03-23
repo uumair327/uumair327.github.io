@@ -10,7 +10,7 @@ const notoSansKr = Noto_Sans_KR({
   variable: "--Noto-Sans-KR",
 });
 
-export const metadata: Metadata = getBaseMetadata({ title: "kyechan99" });
+export const metadata: Metadata = getBaseMetadata({ title: "uumair327" });
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (

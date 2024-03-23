@@ -13,12 +13,12 @@ export default function Resume() {
             <div className="col-md-4 profile-block">
               <img
                 className="profile-img"
-                src="https://avatars2.githubusercontent.com/u/14146566?s=460&u=483e82666381dc503a456252f195e3d05230c8ba&v=4"
+                src="https://avatars.githubusercontent.com/u/72534352?s=400&u=8712f01f42884fe5becc72ef163743274a0c353f&v=4"
               />
             </div>
             <div className="col-md-8">
               <h1 className="name">
-                강예찬<span className="name-en"> | &nbsp;Ye-Chan Kang</span>
+                Umair<span className="name-en"> | &nbsp;Umair Ansari</span>
               </h1>
 
               <ul className="info-list profile-list">
@@ -27,29 +27,29 @@ export default function Resume() {
                     {" "}
                     <IconDeviceMobile stroke={1.25} />{" "}
                   </span>
-                  010-5236-7457
+                  +919049116748
                 </li>
                 <li className="info">
                   <span className="info-icon">
                     <IconMail stroke={1.25} />
                   </span>
-                  kyechan99@gmail.com
+                  uumair327@gmail.com
                 </li>
 
                 <li className="info">
                   <span className="info-icon">
                     <IconBrandGithub stroke={1.25} />
                   </span>
-                  <a href="https://github.com/kyechan99" target="_blank">
-                    github.com/kyechan99
+                  <a href="https://github.com/uumair327" target="_blank">
+                    github.com/uumair327
                   </a>
                 </li>
                 <li className="info">
                   <span className="info-icon">
                     <IconPencil stroke={1.25} />
                   </span>
-                  <Link href="https://kyechan99.github.io" target="_blank">
-                    kyechan99.github.io
+                  <Link href="https://uumair327.github.io" target="_blank">
+                    uumair327.github.io
                   </Link>
                 </li>
               </ul>
@@ -57,22 +57,22 @@ export default function Resume() {
           </div>
           {/* <hr className="divider" /> */}
           <div className="resume-block resume-introduce">
-            <div className=" ">
+            <div className="">
               <div className="intro-block">
                 <p>
-                  일일 평균 70,000 요청량 이상의 오픈소스를 관리하고 있습니다.
+                  I manage open-source projects with an average of over 70,000 requests per day.
                   <br />
-                  개발자로서 무엇을 해결하는지를 넘어 <b className="stress">근본적인 문제와 창의적인 해결책</b>에
-                  고민합니다.
-                  <br /> 이를 바탕으로 오픈소스에 관심이 많아 개발하면서 도전과 성장을 즐기고 있습니다.
+                  As a developer, I contemplate not only what problems to solve but also <b className="stress">fundamental issues and creative solutions</b>.
+                  <br /> Based on this, I enjoy challenges and growth while developing with a keen interest in open-source projects.
                 </p>
                 <p>
-                  가치를 창출하는 코드를 위해 <b className="stress">지속적인 학습과 실천에 적극적</b>입니다. <br />
-                  생각을 행동으로 거침없이 옮기면서 현재는 활성 사용자 15,000명 이상의 프로그램을 서비스하고 있습니다.
+                  I am actively engaged in <b className="stress">continuous learning and practical application</b> to produce valuable code. <br />
+                  By translating thoughts into action, I currently serve more than 15,000 active users with programs.
                 </p>
               </div>
             </div>
           </div>
+
 
           <PrintDivider />
           <div className="resume-block resume-project">
@@ -103,7 +103,7 @@ export default function Resume() {
                 <h4 className="semi-title">Introduction</h4>
                 <ul className="semi-list">
                   <li style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                    이미지 동적 생성 오픈소스{" "}
+                    Dynamic image generation open-source project{" "}
                     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/kyechan99/capsule-render" />
                   </li>
                 </ul>
@@ -111,30 +111,24 @@ export default function Resume() {
                 <p>Owner & Maintainer</p>
                 <h4 className="semi-title">Challenge & Experience</h4>
                 <ul className="semi-list origin-ul">
-                  <li>API Query 값으로 SVG를 활용해 동적인 이미지 응답</li>
-                  <li>하루 평균 70,000건 이상 요청 (최다 85,000건)</li>
-                  <li>오픈 소스 사용 방법 및 예외 사항 등을 명시한 문서 제공</li>
+                  <li>Utilized SVG based on API query values to dynamically respond with images</li>
+                  <li>Handled over 70,000 requests per day (peak at 85,000)</li>
+                  <li>Provided documentation specifying open-source usage methods and exceptions</li>
                   <li>
-                    <a href="https://github.com/kyechan99/capsule-render/discussions/15" target="__blank">
-                      Discussions
-                    </a>
-                    을 나누며 에러나 기능사항에 대해 토론하고 적용시킴
+                    Engaged in <a href="https://github.com/kyechan99/capsule-render/discussions/15" target="__blank">Discussions</a> to discuss and implement errors or feature requests
                   </li>
                   <li>
-                    서비스 에러 방지
+                    Prevented service errors
                     <ul className="semi-list origin-ul">
-                      <li>테스트 코드 작성</li>
-                      <li>Github Action을 통해 테스트 결과(Coverage Report) 분석</li>
+                      <li>Wrote test code</li>
+                      <li>Analyzed test results (Coverage Report) via GitHub Actions</li>
                     </ul>
                   </li>
                   <li>
-                    <a href="https://github.com/kyechan99/capsule-render/issues/19" target="__blank">
-                      사용자 편의 개선을 위한
-                    </a>{" "}
-                    Generator 제공
+                    Provided a <a href="https://github.com/kyechan99/capsule-render/issues/19" target="__blank">Generator</a> for user convenience
                     <ul className="semi-list origin-ul">
-                      <li>GitHub가 제공한 기존 Traffic 분석과 Generator 방문수 분리</li>
-                      <li>분리된 방문자를 더욱 자세히 파악하기 위해 Google Analytics 적용</li>
+                      <li>Separated GitHub-provided Traffic analysis from Generator visits</li>
+                      <li>Applied Google Analytics to more accurately track separated visitors</li>
                     </ul>
                   </li>
                 </ul>
@@ -500,24 +494,23 @@ export default function Resume() {
               </div>
               <div className="col-md-8 desc">
                 <h4 className="semi-title">Introduction</h4>
-                <p>MORPG 협동 레이드 게임</p>
+                <p>MORPG Cooperative Raid Game</p>
                 <h4 className="semi-title">Role</h4>
                 <ul className="semi-list">
-                  <li>개발 및 팀장을 맡으며 총 13명의 다양한 직군을 모집해 6개월간 개발</li>
+                  <li>Responsible for development and team leadership, recruited a diverse team of 13 members for a 6-month development period</li>
                 </ul>
                 <h4 className="semi-title">Effort & Experience</h4>
                 <ul className="semi-list origin-ul">
-                  <li>분야를 가리지 않고 개발 열정을 다양하게 쏟아옴</li>
-                  <li>생방송 당시 2만명이 넘게 시청</li>
-                  <li>평균 동시접속자 35명과 1745명의 사용자 가입</li>
+                  <li>Poured diverse development passion without distinguishing fields</li>
+                  <li>Over 20,000 viewers watched the live broadcast</li>
+                  <li>35 average concurrent users and 1745 user registrations</li>
                   <li>
-                    순수한 개발 즐거움에 몰두하며{" "}
-                    <Link href="https://kyechan99.github.io/project/games/loswak" target="_blank">
-                      새로운 도전을 적극적으로 시도
-                    </Link>
+                    Actively attempted new challenges while immersed in the pure joy of development
+                    <a href="https://kyechan99.github.io/project/games/loswak" target="_blank">Learn more</a>
                   </li>
                 </ul>
               </div>
+
             </div>
           </div>
 
@@ -527,60 +520,58 @@ export default function Resume() {
             <h2 className="title">Activities</h2>
             <div>
               <h3 className="info-log">
-                J2KB 코딩 스터디 5th
+                J2KB Coding Study 5th
                 <span className="info-detail left">2022</span>
               </h3>
               <ul className="semi-list">
                 <li>
-                  React 스터디에 참가하면서 주간 목표를 정해 포스팅하거나 경험해본 내용을 가지고 공유하는 시간을
-                  가졌습니다.
+                  Participated in React study, set weekly goals, and shared experiences by posting or sharing what I've learned.
                 </li>
-                <li>공부한 내용을 가지고 프로젝트 개발에 참여하면서 Scribubble 을 개발했습니다.</li>
-                <li>독창적인 기획과 서비스 완성도로 찬사를 받으며 대상을 수상했습니다.</li>
+                <li>Developed Scribubble based on the studied content and participated in project development.</li>
+                <li>Received praise for creative planning and service completeness and won the grand prize.</li>
               </ul>
             </div>
             <hr className="divider" />
             <div>
               <h3 className="info-log">
-                국방 오픈소스 아카데미 OSAM
+                Defense Open Source Academy OSAM
                 <span className="info-detail left">2020</span>
               </h3>
               <ul className="semi-list">
-                <li>군 복무중 비어있는 시간을 활용하기 위해 공부하면서 참가하게 되었습니다.</li>
-                <li>
-                  자동 모자이크 웹 서비스를 개발하면서 프레임워크 Vue.js를 처음 접하게 되었고 웹 공부를 시작했습니다.
-                </li>
-                <li>프로젝트의 구조나 개발자들끼리의 작업 분배에 대해 고민해보는 경험이 되었습니다.</li>
+                <li>Participated to utilize spare time during military service for study and learning.</li>
+                <li>First encountered the Vue.js framework while developing an automatic mosaic web service and started studying web development.</li>
+                <li>Reflecting on the project structure and task distribution among developers was a valuable experience.</li>
               </ul>
             </div>
             <hr className="divider" />
             <div>
               <h3 className="info-log">
-                기타 오픈소스 활동
+                Other Open Source Activities
                 <span className="info-detail left"></span>
               </h3>
               <ul className="semi-list origin-ul">
                 <li>
-                  [직접 개발] : 브라우저 확장 프로그램 활성 자용자수 15,000 명 도달 -{" "}
+                  [Self-developed]: Browser extension program reached 15,000 active users -
                   <a href="https://github.com/kyechan99/chzzk-plus">chzzk-plus</a>
                 </li>
                 <li>
-                  [직접 개발] : 드래그시 도우미를 띄워주는 Vue.js 컴포넌트 배포 -{" "}
+                  [Self-developed]: Deployed Vue.js component to display drag-and-drop helper -
                   <a href="https://www.npmjs.com/package/dragond">npm package</a>
                 </li>
                 <li>
-                  [직접 개발] : 평소 자주 사용하는 최소한의 디자인 및 기능 프레임워크 -{" "}
+                  [Self-developed]: Minimal design and functionality framework frequently used -
                   <a href="https://yuristrap.github.io/v1.0/introduction/customize">DOCS</a>
                 </li>
                 <li>
-                  [Merge] : devhints의 sass 치트시트 내용 추가 -{" "}
+                  [Merge]: Added sass cheatsheet content to devhints -
                   <a href="https://github.com/rstacruz/cheatsheets/pull/1481">#1481</a>
                 </li>
                 <li>
-                  [Merge] : naver/fe-news 11월 경로 수정 - <a href="https://github.com/naver/fe-news/pull/35">#35</a>
+                  [Merge]: Updated path for naver/fe-news in November -
+                  <a href="https://github.com/naver/fe-news/pull/35">#35</a>
                 </li>
                 <li>
-                  [Open] : graphql-kr 한국 문서 수정 -{" "}
+                  [Open]: Modified Korean documentation for graphql-kr -
                   <a href="https://github.com/graphql-kr/graphql-kr.github.io/pull/4">#4</a>
                 </li>
               </ul>
@@ -597,9 +588,9 @@ export default function Resume() {
                 <span className="info-detail left"></span>
               </h3>
               <ul className="semi-list origin-ul">
-                <li>SCSS 를 사용한 프레임워크를 만들어 보기도 하며 Semantic Markup을 준수하며 사용합니다.</li>
-                <li>Styled-Component 및 Emotion 을 활용한 프로젝트를 설계 할 수 있고 선호합니다.</li>
-                <li>SEO 에 신경쓰며 프로젝트를 진행하며 사용자 유입 분석을 위해 시도합니다.</li>
+                <li>Created frameworks using SCSS and adhere to Semantic Markup.</li>
+                <li>Capable of designing projects using Styled-Component and Emotion.</li>
+                <li>Focus on SEO and attempt user acquisition analysis during project development.</li>
               </ul>
             </div>
             <div>
@@ -608,8 +599,8 @@ export default function Resume() {
                 <span className="info-detail left"></span>
               </h3>
               <ul className="semi-list origin-ul">
-                <li>ES6 문법을 활용해 웹 어플리케이션을 개발하는 데 익숙합니다.</li>
-                <li>TypeScript 를 이용해 데이터 타입과 문법 등을 준수하며 개발하는 것을 선호합니다.</li>
+                <li>Proficient in developing web applications using ES6 syntax.</li>
+                <li>Prefer development using TypeScript to adhere to data types and syntax.</li>
               </ul>
             </div>
             <div>
@@ -618,9 +609,9 @@ export default function Resume() {
                 <span className="info-detail left"></span>
               </h3>
               <ul className="semi-list origin-ul">
-                <li>CSR과 SSR에 대해 고민하며 개발합니다.</li>
-                <li>Flux 패턴을 이해하고 Redux 및 Recoil 을 사용합니다.</li>
-                <li>작은 단위로 개발해 상향적 조립에 노력하며 Storybook을 도입해본 경험이 있습니다.</li>
+                <li>Develop with consideration for CSR and SSR.</li>
+                <li>Understand Flux pattern and utilize Redux and Recoil.</li>
+                <li>Effort in developing small units and introducing Storybook for incremental assembly.</li>
               </ul>
             </div>
             <div>
@@ -629,11 +620,11 @@ export default function Resume() {
                 <span className="info-detail left"></span>
               </h3>
               <ul className="semi-list origin-ul">
-                <li>확장프로그램, Discord 봇, Electron을 사용한 데스크톱 앱 등 필요한 SW를 직접 만들어 사용합니다.</li>
-                <li>Node.js/Express.js 를 사용해 간단한 REST API를 구축해 프로젝트를 진행해보기도 합니다.</li>
-                <li>Git 컨벤션을 정리해 협업을 진행하며 Github Action을 사용해 관리합니다.</li>
-                <li>취미로 C#, Unity를 이용해 게임을 만듭니다.</li>
-                <li>스스로 학습하고 해결하는 것을 즐기면서도 동료나 스승이 있음을 잊지 않습니다</li>
+                <li>Develop necessary software such as browser extensions, Discord bots, and desktop apps using Electron.</li>
+                <li>Build simple REST APIs using Node.js/Express.js for projects.</li>
+                <li>Organize Git conventions for collaboration and manage with Github Action.</li>
+                <li>Create games using C# and Unity as a hobby.</li>
+                <li>Enjoy self-learning and problem-solving while remembering the presence of colleagues or mentors.</li>
               </ul>
             </div>
           </div>
@@ -644,12 +635,12 @@ export default function Resume() {
             <h2 className="title">EDUCATION</h2>
 
             <p className="info-log">
-              국민대학교 소프트웨어학과
-              <span className="info-detail left">2018.03 - 2024.02 (졸업)</span>
+              Software Engineering, KJ Somaiya Institute of Technology
+              <span className="info-detail left">2021.03 - 2025.02 (Pursuing)</span>
             </p>
             <p className="info-log">
-              한국게임과학고 프로그래밍과
-              <span className="info-detail left">2015.03 - 2018.02 (졸업)</span>
+              Rais High School & Jr. College
+              <span className="info-detail left">2018.03 - 2020.02 (Graduated)</span>
             </p>
           </div>
 
@@ -658,23 +649,23 @@ export default function Resume() {
 
             <ul className="semi-list origin-ul">
               <li>
-                해군 창업경진대회 - 장려상
+                Navy Startup Competition - Encouragement Award
                 <span className="info-detail left">2020</span>
               </li>
               <li>
-                제33회 한국정보올림피아드 경시부문 지역대회 - 동상
+                33rd Korean Olympiad in Informatics Regional Contest - Silver Medal
                 <span className="info-detail left">2016</span>
               </li>
               <li>
-                글로벌 인디 게임 제작 경진대회 - 장려상
+                Global Indie Game Development Competition - Encouragement Award
                 <span className="info-detail left">2016</span>
               </li>
               <li>
-                미래상상 기술 경진대회 - 동상
+                Future Imagination Technology Competition - Silver Medal
                 <span className="info-detail left">2016</span>
               </li>
               <li>
-                제 1회 전북 초중고 창업아이디어 및 창업아이템 경진대회 - 장려상
+                1st Jeonbuk Primary, Middle and High School Startup Idea and Item Competition - Encouragement Award
                 <span className="info-detail left">2015</span>
               </li>
             </ul>
@@ -685,7 +676,8 @@ export default function Resume() {
   );
 }
 
-/* (구) Jekyll 블로그 파일이라 구림. 추후 개선 */
+// <!-- (Old) Jekyll blog file, needs improvement in the future -->
+
 const Container = styled.div`
   padding-left: 1rem;
   padding-right: 1rem;

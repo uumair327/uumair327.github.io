@@ -2,16 +2,16 @@ import { allPosts as allCLPosts } from "contentlayer/generated";
 
 import { PostType } from "@/types/post";
 
-// contentlayer의 allPosts 를 시간순으로 정렬
+// Sort allPosts from contentlayer by date
 export const allPosts: PostType[] = allCLPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-// '포스트' 카테고리의 글만
+// Filter posts under the 'post' category
 export const allPostPosts: PostType[] = allPosts.filter(post => post._raw.sourceFilePath.includes("post"));
 
-// '프로젝트' 카테고리의 글만
+// Filter posts under the 'project' category
 export const allProjectPosts: PostType[] = allPosts.filter(post => post._raw.sourceFilePath.includes("project"));
 
-// 모든 글들의 태그들
+// Get all tags from all posts
 interface TagCount {
   [key: string]: number;
 }
