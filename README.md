@@ -1,4 +1,4 @@
-# kyechan99.github.io
+# uumair327.github.io
 
 ![](/assets/favicon.ico)
 <a href="https://github.com/kyechan99/kyechan99.github.io/discussions">
