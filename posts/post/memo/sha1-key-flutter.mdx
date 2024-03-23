@@ -1,0 +1,38 @@
+---
+layout: post
+title: Generating SHA1 Key for Flutter Application
+date: 2024-03-23
+category: Memo
+description: Step-by-step guide to generate SHA1 key for a Flutter application.
+tags: [Flutter, Android, SHA1, Keytool]
+keywords: Memo, Flutter, Android, SHA1, Keytool, Certificate, Debug, Release
+---
+
+### Prerequisite
+
+Before generating the SHA1 key for your Flutter application, ensure that you have Java installed on your system. You can download and install the latest version of Java from the official website.
+
+### Steps to Generate SHA1 Key
+
+1. **Navigate to the App Directory:**
+   Open your terminal or command prompt and navigate to the root directory of your Flutter application where the `app-debug.apk` file is located.
+
+2. **Run Keytool Command:**
+   Execute the following command to generate the SHA1 key:
+
+   ```bash
+   keytool -printcert -jarfile app-debug.apk
+   ```
+
+3. **Provide Keystore Password (if required):**
+   If prompted, enter the keystore password. For debug builds, the default password is usually `android`.
+
+4. **Locate SHA1 Key:**
+   After running the command, the SHA1 key will be displayed in the terminal output. It will typically appear in the form of a long hexadecimal string.
+
+5. **Note the SHA1 Key:**
+   Copy the generated SHA1 key and store it securely. You may need it for various purposes such as configuring Firebase services, Google Sign-In, or API integrations.
+
+### Conclusion
+
+Generating the SHA1 key is essential for various functionalities in your Flutter application, especially when integrating with third-party services or APIs. By following the steps outlined above, you can easily obtain the SHA1 key required for your development and debugging purposes.

@@ -7,6 +7,7 @@ import {
   IconNote,
   IconPencil,
   IconSchool,
+  IconApiApp, 
   TablerIconsProps,
 } from "@tabler/icons-react";
 import React from "react";
@@ -26,6 +27,7 @@ const iconMapping: Record<string, (props: TablerIconsProps) => JSX.Element> = {
   Memo: IconNote,
   Web: IconBrandSafari,
   Game: IconDeviceGamepad2,
+  App: IconApiApp, 
   Etc: IconDots,
 };
 
@@ -50,4 +52,4 @@ export const POST_CATEGORY = ["Lib", "Memo", "Think", "Etc"]; //! 새로운 카�
  *                      포트폴리오 카테고리
  *
  **********************************************************************/
-export const PROJECT_CATEGORY = ["Web", "Game"];
+export const PROJECT_CATEGORY = ["Web", "Game", "App"];
