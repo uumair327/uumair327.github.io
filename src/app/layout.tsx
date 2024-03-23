@@ -26,4 +26,3 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   );
 }
 
-// google-site-verification=gn2sWvweuddbK08UkGVye5iG662plG8LYiGmYbYWFYU
