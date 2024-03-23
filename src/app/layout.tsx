@@ -16,8 +16,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html data-theme="" lang="kr" suppressHydrationWarning={true}>
       <head>
-        <meta name="google-site-verification" content="CPBHSXOcqx3RLJ-Pn1Vr34l30UqV46HXj7Et7LsCM7U" />
-        <meta name="naver-site-verification" content="32b3ee031edf2f6c12c44c12006d46b903de6110" />
+        <meta name="google-site-verification" content="gn2sWvweuddbK08UkGVye5iG662plG8LYiGmYbYWFYU" />
+        <meta name="naver-site-verification" content="3bd8194507b9189faf92fab7ddf5b100bffa590f" />
       </head>
       <body className={notoSansKr.className}>
         <Provider>{children}</Provider>
@@ -25,3 +25,5 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     </html>
   );
 }
+
+// google-site-verification=gn2sWvweuddbK08UkGVye5iG662plG8LYiGmYbYWFYU

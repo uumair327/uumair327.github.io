@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://kyechan99.github.io/sitemap.xml",
-    host: "https://kyechan99.github.io",
+    sitemap: "https://uumair327.github.io/sitemap.xml",
+    host: "https://uumair327.github.io",
   };
 }
