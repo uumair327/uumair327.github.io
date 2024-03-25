@@ -279,6 +279,52 @@ export default function Resume() {
             <h2 className="title">Activities</h2>
             <div>
               <h3 className="info-log">
+                Google Solution Challenge 2024
+                <span className="info-detail left">2024</span>
+              </h3>
+              <ul className="semi-list">
+                <li>
+                  Participated in the Google Solution Challenge 2024 with Project Guardian Care, focusing on child safety.
+                </li>
+                <li>
+                  This project aimed to create a centralized platform for child safety, providing tools and resources for both parents and children
+                  to navigate online and offline risks effectively.
+                </li>
+                <li>
+                  [Self-developed]: Guardian Care -
+                  <a href="https://github.com/uumair327/ucs.git">Guardian Care</a>
+                </li>
+                {/* <div className="url-block github">
+                  <a href="https://github.com/uumair327/ucs.git" target="_blank">
+                    GitHub Link: https://github.com/uumair327/ucs.git
+                  </a>
+                </div> */}
+              </ul>
+            </div>
+            <hr className="divider" />
+            <div>
+              <h3 className="info-log">
+                GDSC KJSIT -App Dev Expert
+                <span className="info-detail left">Jun’23 - Present</span>
+              </h3>
+              <ul className="semi-list">
+                <li>
+                  Lead sessions and address doubts on app development technologies within GDSC KJSIT.
+                </li>
+                <li>
+                  Actively engage with participants, fostering a collaborative learning environment.
+                </li>
+                <li>
+                  Orchestrated the organization and delivery of both the Android Bootcamp (19 Jan-20 Jan '24) and ML Bootcamp (21 Feb - 28 Feb '24) as a keynote speaker and content creator.
+                </li>
+                <li>
+                  Played a pivotal role in driving the growth and knowledge-sharing initiatives within GDSC, demonstrating leadership qualities and a commitment to fostering learning and innovation.
+                </li>
+              </ul>
+            </div>
+            {/* <hr className="divider" />
+            <div>
+              <h3 className="info-log">
                 J2KB Coding Study 5th
                 <span className="info-detail left">2022</span>
               </h3>
@@ -334,7 +380,8 @@ export default function Resume() {
                   <a href="https://github.com/graphql-kr/graphql-kr.github.io/pull/4">#4</a>
                 </li>
               </ul>
-            </div>
+            </div> */}
+            
           </div>
 
           <PrintDivider />
@@ -445,15 +492,15 @@ export default function Resume() {
             <ul className="semi-list origin-ul">
               <li>
                 Achieved a 3-star rating in C and 2-star rating in C++ at HackerRank, demonstrating strong coding skills and problem-solving abilities.
-              <span className="info-detail left">Ongoing</span>
+                <span className="info-detail left">Ongoing</span>
               </li>
               <li>
                 Actively participated in “KJSIT-INTECH 2K23” an esteemed technical event.
-              <span className="info-detail left">2023</span>
+                <span className="info-detail left">2023</span>
               </li>
               <li>
                 7-star local guide on Google Maps, with an impressive 20 lakh + views and reviews placing in the top 30% category, showcasing a keen eye for detail and a passion for sharing valuable insights.
-              <span className="info-detail left">Present</span>
+                <span className="info-detail left">Present</span>
               </li>
             </ul>
           </div>
