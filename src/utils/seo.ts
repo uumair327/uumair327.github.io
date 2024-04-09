@@ -10,7 +10,7 @@ export const siteConfig = {
   description: "uumair327",
   copyright: "uumair327 © All rights reserved.",
   since: 2024,
-  googleAnalyticsId: "",
+  googleAnalyticsId: "G-SM3Z0KDM2T",
   author: "uumair327",
   email: "uumair327@gmail.com",
   profile: "https://uumair327.github.io/profile.png",
