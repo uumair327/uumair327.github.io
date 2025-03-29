@@ -1,5 +1,4 @@
 "use client";
-
 import styled from "@emotion/styled";
 import { IconGitFork, IconStar } from "@tabler/icons-react";
 import React, { useEffect } from "react";
@@ -20,11 +19,11 @@ type RepoType = {
   url: string;
 };
 
-const getPinnedRepos = async () => {
+const getPinnedRepos = async (): Promise<RepoType[]> => {
   try {
     const res = await fetch("https://gh-pinned-api.vercel.app/api?user=uumair327", {
       next: {
-        revalidate: 86400, // 24 시간 간격
+        revalidate: 86400, // revalidate every 24 hours
       },
     });
     if (!res.ok) throw new Error("Failed to fetch data");
@@ -32,15 +31,16 @@ const getPinnedRepos = async () => {
     return data;
   } catch (err) {
     console.log("Error", err);
+    return []; // Return an empty array in case of error
   }
 };
 
 export default function RepoBoard() {
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState<RepoType[]>([]);
 
   const getData = async () => {
     const t = await getPinnedRepos();
-    setData(t);
+    setData(t || []); // Fallback to an empty array if t is undefined
   };
 
   useEffect(() => {
@@ -57,28 +57,32 @@ export default function RepoBoard() {
         <CardRow>
           {data.length > 0
             ? data.map((post: RepoType) => (
-                <CardCol key={post.name}>
-                  <Repo href={post.url}>
-                    <RepoHead>
-                      <RepoName>{post.name}</RepoName>
-                      <RepoDescription>{post.description}</RepoDescription>
-                    </RepoHead>
-                    <RepoDetail>
-                      <span>
-                        <IconStar width={16} height={16} stroke={1.5} /> {post.stars}
-                      </span>
-                      <span>
-                        <IconGitFork width={16} height={16} stroke={1.5} /> {post.forks}
-                      </span>
-                    </RepoDetail>
-                  </Repo>
-                </CardCol>
-              ))
+              <CardCol key={post.name}>
+                <Repo href={post.url}>
+                  <RepoHead>
+                    <RepoName>{post.name}</RepoName>
+                    <RepoDescription>{post.description}</RepoDescription>
+                  </RepoHead>
+                  <RepoDetail>
+                    <span>
+                      <IconStar width={16} height={16} stroke={1.5} /> {post.stars}
+                    </span>
+                    <span>
+                      <IconGitFork width={16} height={16} stroke={1.5} /> {post.forks}
+                    </span>
+                  </RepoDetail>
+                </Repo>
+              </CardCol>
+            ))
             : [...Array(6)].map((_, idx) => (
-                <CardCol key={idx}>
-                  <Skeleton height="155px" width="100%" style={{ marginTop: "0px", marginBottom: "5px" }} />
-                </CardCol>
-              ))}
+              <CardCol key={idx}>
+                <Skeleton
+                  height="155px"
+                  width="100%"
+                  style={{ marginTop: "0px", marginBottom: "5px" }}
+                />
+              </CardCol>
+            ))}
         </CardRow>
       </Card>
     </>
@@ -92,6 +96,7 @@ const CardRow = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+
 const CardCol = styled.div`
   flex: 0 0 32.5%;
   max-width: 32.5%;
@@ -109,13 +114,13 @@ const CardCol = styled.div`
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
-
   ${maxMedia.mobile} {
     .skeleton {
       height: 130px !important;
     }
   }
 `;
+
 const PlusLink = styled.a`
   float: right;
   padding: 0px 0.75rem;
@@ -125,6 +130,7 @@ const PlusLink = styled.a`
     background-color: var(--hr);
   }
 `;
+
 const Repo = styled.a`
   ${boldBorderStyle}
   ${boldBorderHoverStyle}
@@ -146,15 +152,16 @@ const Repo = styled.a`
     min-height: 130px;
   }
 `;
-const RepoHead = styled.div`
-  /* flex:  */
 
+const RepoHead = styled.div`
   flex: 1 0 auto;
 `;
+
 const RepoName = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
 `;
+
 const RepoDescription = styled.p`
   font-size: 1rem;
   line-height: 1.25rem;
@@ -166,6 +173,7 @@ const RepoDescription = styled.p`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 `;
+
 const RepoDetail = styled.div`
   display: flex;
   justify-content: flex-end;
