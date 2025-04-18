@@ -16,6 +16,7 @@ on:
       - 'next.config.js'
       - 'contentlayer.config.ts'
       - '.github/workflows/**'
+      - '.nojekyll'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
