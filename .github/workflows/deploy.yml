@@ -46,10 +46,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: "20"
           cache: 'npm'
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          static_site_generator: next
       - name: Cache dependencies
         uses: actions/cache@v4
         id: cache
