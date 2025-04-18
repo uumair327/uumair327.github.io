@@ -6,10 +6,11 @@ const isProduction = process.env.NODE_ENV === "production";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: isProduction ? "export" : undefined,
+  output: "export",
   images: {
     unoptimized: true,
   },
+  distDir: "out",
 };
 
 module.exports = withContentlayer(nextConfig);
