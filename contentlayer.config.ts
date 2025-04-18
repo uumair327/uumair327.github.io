@@ -25,6 +25,9 @@ export const Post = defineDocumentType(() => ({
     description: { type: "string" },
     tags: { type: "list", of: { type: "string" } },
     headerImg: { type: "string" },
+    layout: { type: "string" },
+    keywords: { type: "string" },
+    haveImg: { type: "boolean" },
   },
   computedFields: {
     url: { type: "string", resolve: post => `/${post._raw.flattenedPath}` },

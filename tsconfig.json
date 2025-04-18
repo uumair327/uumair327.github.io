@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2018",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,16 +18,25 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "typeRoots": ["node_modules/@types", "@/types/emotion.d.ts"],
+    "typeRoots": [
+      "node_modules/@types",
+      "@/types/emotion.d.ts"
+    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"],
-      "@public": ["./public/*"],
-      "@/*": ["./src/*"]
+      "contentlayer/generated": [
+        "./.contentlayer/generated"
+      ],
+      "@public": [
+        "./public/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
   "include": [
@@ -34,5 +47,7 @@
     ".contentlayer/generated",
     "src/libs/rehypeCodeWrap.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

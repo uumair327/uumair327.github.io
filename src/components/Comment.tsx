@@ -1,9 +1,7 @@
 "use client";
 
 import Giscus, { type Theme } from "@giscus/react";
-import { useRecoilValue } from "recoil";
-
-import { themeState } from "@/recoil/theme";
+import { useTheme } from "next-themes";
 
 // import { useGlobalTheme } from "./layout/Provider";
 
@@ -26,7 +24,7 @@ type DefaultThemeType = Extract<
 >;
 
 export default function Comments() {
-  const theme = useRecoilValue(themeState);
+  const { theme } = useTheme();
   // const { theme } = useGlobalTheme();
 
   return (
