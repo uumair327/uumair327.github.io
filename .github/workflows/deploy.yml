@@ -52,19 +52,11 @@ jobs:
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            .next/cache
-            node_modules
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci --legacy-peer-deps
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install --legacy-peer-deps
       - name: Build with Next.js
         run: |
           npm run build
