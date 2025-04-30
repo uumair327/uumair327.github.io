@@ -2,9 +2,7 @@
 
 import styled from "@emotion/styled";
 import { IconMoon, IconSunHigh } from "@tabler/icons-react";
-import { useRecoilState } from "recoil";
-
-import { themeState } from "@/recoil/theme";
+import { useTheme } from "next-themes";
 
 import Skeleton from "@/components/skeleton";
 import { maxMedia } from "@/libs/media";
@@ -12,11 +10,10 @@ import { maxMedia } from "@/libs/media";
 import Button from ".";
 
 export default function ThemeButton() {
-  const [theme, setTheme] = useRecoilState(themeState);
+  const { theme, setTheme } = useTheme();
 
   const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
