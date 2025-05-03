@@ -45,7 +45,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "src/libs/rehypeCodeWrap.ts"
+    "src/libs/rehypeCodeWrap.ts",
+    "docs/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

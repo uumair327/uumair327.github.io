@@ -82,7 +82,7 @@ export default function Resume() {
               <div className="col-md-4">
                 <h3 className="project-title">
                   <a href="https://github.com/uumair327/ucs" target="_blank">
-                    Unified Child Safety Application (Guardian Care)
+                    Guardian Care
                   </a>
                 </h3>
                 <div className="tags">
@@ -92,7 +92,7 @@ export default function Resume() {
                 </div>
                 <div className="url-block github">
                   <a href="https://github.com/uumair327/ucs" target="_blank">
-                    https://github.com/uumair327/ucs
+                    https://github.com/uumair327/guardiancare
                   </a>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function Resume() {
                 <h4 className="semi-title">Introduction</h4>
                 <ul className="semi-list">
                   <li style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                    Unified Child Safety Application aimed at providing guardians with tools to educate children about online safety.
+                    Guardian Care Application aimed at providing guardians with tools to educate children about online safety.
                     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/uumair327/ucs" />
                   </li>
                 </ul>
@@ -381,7 +381,7 @@ export default function Resume() {
                 </li>
               </ul>
             </div> */}
-            
+
           </div>
 
           <PrintDivider />
